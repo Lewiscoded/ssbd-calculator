@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Small Sort Breakdown Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Small Sort Breakdown Calculator</h1>
+        <div class="title-decoration"></div>
+    </header>
+    <main>
+        <form id="ssbd-form">
+            <label>Insert the Hour (e.g., "2nd"):</label>
+            <input type="text" id="hour" required>
+
+            <label>Insert Plan PPH:</label>
+            <input type="number" id="planPPH" required>
+
+            <label>Insert Volume:</label>
+            <input type="number" id="volume" required>
+
+            <label>Insert Starting Staffing:</label>
+            <input type="number" id="staffing" required>
+
+            <label>Insert Total People Cut:</label>
+            <input type="number" id="peopleCut" required>
+
+            <div id="cuts-section">
+                <label>Staff Cuts:</label>
+                <div id="cuts-container"></div>
+                <button type="button" onclick="addCut()">+ Add Cut</button>
+            </div>
+
+            <label>Insert Hours Worked (per person):</label>
+            <input type="number" id="hoursWorked" step="0.01" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="result"></div>
+    </main>
+    <footer class="footer">
+        <p>built by Jesse J Lewis</p>
+    </footer>
+    <script src="math.js"></script>
+</body>
+
+</html>
